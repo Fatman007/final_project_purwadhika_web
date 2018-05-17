@@ -1,0 +1,20 @@
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+<% include navbaradmin.ejs %>
+    <h1>edit kategori</h1>
+    <form method="post" action="/admin/admin_category_edit/<%=id%>">
+        
+        <br/>
+        <label for="kategori_produk">Ubah kategori : </label>
+        <input type="text" name="kategori_produk" placeholder="season baru"/>
+        <input type="submit" value="submit"/>
+    </form>
+
+    <a href='/admin/admin_category/<%=balik%>'> balik </a>
+
+</body>

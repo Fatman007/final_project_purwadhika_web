@@ -1,0 +1,12 @@
+<html>
+    <head>
+    <% include navbar.ejs%>
+    </head>
+    <body>
+
+    <% for (var i=0;i<data.length;i++){%>
+    <h1><a href="/category/<%= data[i].id%>"> <%=data[i].season%> </a></h1>
+    <% } %>
+    <p><button class='btn btn primary' type='button' onclick='javascript:history.back()'>Balik</button></p>
+    </body>
+</html>

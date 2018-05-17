@@ -1,0 +1,35 @@
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+<% include navbaradmin.ejs %>
+
+    <form method="post" action="/admin/admin_product_stock_add/<%=id%>">
+        
+        <br/>
+        <label for="size">Size : </label>
+        <input type="text" name="size" placeholder=""/>
+
+        <br/>
+        <label for="stock">Stock : </label>
+        <input type="number" name="stock" placeholder=""/>
+
+        <br/>
+      
+        <input type="submit" value="submit"/>
+    </form>
+
+    <a href="/admin/admin_product_stock/<%=balik%>"> balik </a>
+
+</body>
+
+<head>
+    <style>
+
+    </style>
+</head>
+
+

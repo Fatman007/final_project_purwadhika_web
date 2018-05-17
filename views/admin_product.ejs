@@ -1,0 +1,55 @@
+<head>
+    <style>
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border : 1px solid black;
+            padding: 5px
+        }
+
+    </style>
+</head>
+
+<body>
+<% include navbaradmin.ejs %>
+    <h1>list produk</h1>
+
+    <table>
+            <tr>
+                <th>kategori</th>
+                <th>nama produk</th>
+                <th>price</th>
+                <th>deskripsi</th>
+                <th>file gambar</th>
+                <th>gambar</th>
+                <th colspan=3> </th>
+                
+            </tr>
+            <% detail_produk.forEach(x => { %>
+                <tr>
+                    <td><%= x.kategori_produk%></td>
+                    <td><%= x.detail_produk%></td>
+                    <td><%= x.price%></td>
+                    <td><%= x.deskripsi%></td>
+                    <td><%= x.gambar%></td>
+                    <td>
+                    <div class="thumbnail">
+                    <img src="/images/<%= x.gambar%>" class="" width = '100px'/>
+                    </td>
+                    <td><a href="/admin/admin_product_detail/<%= x.id%>"> lihat warna </a></td>
+                    <td><a href="/admin/admin_product_edit/<%= x.id%>"> edit produk </a></td>
+                    <td><a href="/admin/admin_product_delete/<%= x.id%>"> delete produk </a></td>
+                </tr>
+            <% }) %>
+        </table>
+        <br/>
+    <p><a href="/admin/admin_product_register/<%=id%>"> tambah produk </a><p>
+
+    <!-- <p><a href="/admin/admin_category/1"> balik </a></p> -->
+    <!-- <p><button class='btn btn primary' type='button' onclick='javascript:history.back()'>Balik</button></p> -->
+    <p><a href="/admin/adminhome"> balik ke rumah </a></p>
+
+</body>

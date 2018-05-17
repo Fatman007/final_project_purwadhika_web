@@ -1,0 +1,33 @@
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+<% include navbaradmin.ejs %>
+
+    <form method="post" action="/admin/admin_product_register/<%=id%>" enctype="multipart/form-data">
+        
+        <br/>
+        <label for="detail_produk">Nama produk : </label>
+        <input type="text" name="detail_produk" placeholder=""/>
+
+        <br/>
+        <label for="price">Harga : </label>
+        <input type="number" name="price" placeholder=""/>
+
+        <br/>
+        <label for="deskripsi">Deskripsi : </label>
+        <input type="text" name="deskripsi" placeholder=""/>
+
+        <br/>
+        <label for="gambar">Gambar : </label>
+        <input type="file" name="gambar" placeholder="" accept=".jpg, .png" required/>
+
+        <input type="submit" value="submit"/>
+    </form>
+
+    <a href="/admin/admin_product/<%=balik%>"> balik </a>
+
+</body>

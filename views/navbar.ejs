@@ -1,0 +1,22 @@
+
+<html>
+<head>
+      <style>
+    a{
+        color: rgb(162, 0, 0);
+    }
+    </style>
+</head>    
+    <body>
+
+        <% if ( username == null) { %>
+            <a href="/">home</a><span></span>
+            <a href="/formlogin">login</a>
+        <% } else { %>
+            <h3><%= welcome %> <b><%= username %></b> ,<button type="button" class="btn btn-danger" onclick="return confirm('Keluar?')"> <a href="/logout">Logout</a></button>|<button type="submit" class="btn btn-success"><a href="/">home</a></button>|<button type="submit" class="btn btn-success"> <a href="/cart">BAG</a> </button> | <a href="/historyinvoice/<%=  iduser %>" class="btn btn-success"> History Invoice</a> </h3></h3>
+            
+        <% } %>     
+    </body>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</html>

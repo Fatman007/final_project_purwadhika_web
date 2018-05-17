@@ -1,0 +1,21 @@
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+<% include navbaradmin.ejs %>
+    
+    <form method="post" action="/admin/admin_product_colour/<%=id%>">
+        
+        <br/>
+        <label for="warna_produk">Warna : </label>
+        <input type="text" name="warna_produk" placeholder="warna"/>
+        <input type="submit" value="submit"/>
+    </form>
+
+    <!--<a href="/admin/admin_product_detail/<%=balik%>"> balik </a>-->
+    <!-- <p><button class='btn btn primary' type='button' onclick='javascript:history.back()'>Balik</button></p> -->
+    <p><a href="/admin/adminhome"> balik ke rumah </a></p>
+</body>

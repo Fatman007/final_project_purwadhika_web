@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <% include navbar.ejs%>
+    <body>
+         <p><%= details[0].detail_produk %></p>
+         <p><%= details[0].price %></p>
+         <p><%= details[0].deskripsi %></p>
+            <select>
+        <% details.forEach (x => { %> 
+                <option > <%= x.warna_produk %> </option>
+        <% }) %>
+            </select>                             
+
+    </body>
+</html>

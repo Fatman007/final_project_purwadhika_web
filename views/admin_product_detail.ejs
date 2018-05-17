@@ -1,0 +1,41 @@
+<head>
+    <style>
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border : 1px solid black;
+            padding: 5px
+        }
+
+    </style>
+</head>
+
+<body>
+<% include navbaradmin.ejs %>
+    <h1>list warna produk <%= detail_produk_warna[0].detail_produk %></h1>
+
+    <table>
+            <tr>
+                <th>warna</th>
+                
+            </tr>
+            <% detail_produk_warna.filter(x => x.id_produk !== null).forEach(x => { %>
+                <tr>
+                    <td><%= x.warna_produk%></td>
+                    <td><a href="/admin/admin_product_stock/<%= x.id%>"> cek ukuran & stock</a></td>
+                    <td><a href="/admin/admin_product_colour_edit/<%= x.id%>"> edit warna </a></td>
+                    <td><a href="/admin/admin_product_colour_delete/<%= x.id%>"> delete warna </a></td>
+                </tr>
+            <% }) %>
+        </table>
+        <br/>
+    <p><a href="/admin/admin_product_colour/<%=id%>"> tambah warna </a><p>
+
+    <!--<p><a href="/admin/admin_product/1"> balik </a></p> -->
+    <!-- <p><button class='btn btn primary' type='button' onclick='javascript:history.back()'>Balik</button></p> -->
+    <p><a href="/admin/adminhome"> balik ke rumah </a></p>
+
+</body>

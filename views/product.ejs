@@ -1,0 +1,17 @@
+<html>
+    <head>
+    <% include navbar.ejs%>
+    </head>
+    <body>
+
+    <% for (var i=0;i<data.length;i++){%>
+    <div class="thumbnail">
+    <img src="/images/<%=data[i].gambar%>" class="" width = '300px'/>
+    <div class="caption">
+    <h1><a href="/detail/<%= data[i].id %>"> detail produk <%=data[i].detail_produk%> </a></h1>
+    </div>
+    </div>
+    <% } %>
+    <p><button class='btn btn primary' type='button' onclick='javascript:history.back()'>Balik</button></p>
+    </body>
+</html>

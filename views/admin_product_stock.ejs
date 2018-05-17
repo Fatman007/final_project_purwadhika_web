@@ -1,0 +1,44 @@
+<head>
+    <style>
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border : 1px solid black;
+            padding: 5px
+        }
+
+    </style>
+</head>
+
+<body>
+<% include navbaradmin.ejs %>
+    <h1>list size dan stock <%= sizeku[0].warna_produk %></h1>
+
+    <table>
+            <tr>
+                <th>size</th>
+                <th>stock</th>
+                <th></th>
+                <th></th>
+                
+            </tr>
+            <% sizeku.filter(x => x.id_warna !== null).forEach(x => { %>
+                <tr>
+                    <td><%= x.size%></td>
+                    <td><%= x.stock%></td>
+                    <td><a href="/admin/admin_product_stock_edit/<%= x.id%>"> edit size & stock </a></td>
+                    <td><a href="/admin/admin_product_stock_delete/<%= x.id%>"> delete size & stock </a></td>
+                </tr>
+            <% }) %>
+        </table>
+        <br/>
+    <p><a href="/admin/admin_product_stock_add/<%=id%>"> add size & stock</a><p>
+
+    <!--<p><a href="/admin/admin_product_detail/1"> balik </a></p>-->
+    <!-- <p><button class='btn btn primary' type='button' onclick='javascript:history.back()'>Balik</button></p> -->
+    <p><a href="/admin/adminhome"> balik ke rumah </a></p>
+
+</body>

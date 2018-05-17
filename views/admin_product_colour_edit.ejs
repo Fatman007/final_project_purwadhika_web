@@ -1,0 +1,21 @@
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+<% include navbaradmin.ejs %>
+    
+    <form method="post" action="/admin/admin_product_colour_edit/<%=id%>">
+        
+        <br/>
+        <label for="warna_produk">warna : </label>
+        <input type="text" name="warna_produk" placeholder=""/>
+
+        <input type="submit" value="submit"/>
+    </form>
+
+    <a href="/admin/admin_product_colour/<%=balik%>"> balik </a>
+
+</body>

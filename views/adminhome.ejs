@@ -1,0 +1,32 @@
+<head>
+    <style>
+        table,th,td{padding: 5px;}
+    </style>
+</head>
+
+<body>
+<% include navbaradmin.ejs %>
+    
+        <table>
+            <tr>
+                <th colspan = 4>Season</th>
+            </tr>
+            <% season.forEach(x => { %>
+                <tr>
+                    <td><%= x.season%></td>
+                    <td><a href="/admin/admin_category/<%= x.id%>"> lihat kategori season </a></td>
+                    <td><a href="/admin/admin_season_edit/<%= x.id%>"> edit season </a></td>
+                    <td><a href="/admin/admin_season_delete/<%= x.id%>"> delete season </a></td>
+                </tr>
+            <% }) %>
+        </table>
+        <br/>
+        
+        <p><a href="/admin/admin_season_register"> add season </a></p>
+        <p><a href="/historyinvoice">invoice</a></p>
+        
+
+
+
+    
+</body>
